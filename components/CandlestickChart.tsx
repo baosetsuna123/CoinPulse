@@ -38,8 +38,9 @@ const CandlestickChart = ({
 
   const handlePeriodChange = (newPeriod: Period) => {
     if (newPeriod === period) return;
-      setPeriod(newPeriod);
+
     startTransition(async () => {
+      setPeriod(newPeriod);
       await fetchOHLCData(newPeriod);
     });
   };
