@@ -4,6 +4,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { usePathname } from 'next/navigation';
 import { cn } from '@/lib/utils';
+import { Search as SearchIcon } from 'lucide-react';
 
 const Header = () => {
   const pathname = usePathname();
@@ -25,9 +26,7 @@ const Header = () => {
           >
             Home
           </Link>
-
-          <p>Search Modal</p>
-
+            
           <Link
             href="/coins"
             className={cn('nav-link', {
